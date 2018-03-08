@@ -3,7 +3,7 @@ require 'rack/utils'
 require 'rack/mime'
 require 'rack/request'
 require 'rack/head'
-
+load 'deploy/assets'
 module Rack
   # Rack::File serves files below the +root+ directory given, according to the
   # path info of the Rack request.

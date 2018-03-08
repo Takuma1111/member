@@ -1,0 +1,23 @@
+<h1>会員一覧</h1>
+<table border="1">
+
+  <%array = @members%>
+<tr><th align=center>会員ID</th> <th align=center>氏名</th> <th align=center>性別</th><th align=center>年齢</th></tr>
+
+
+  <tr>
+   <% array.each do |array| %>
+　　<td><%= array[:id] %></td>
+   <td><%= array[:name] %></td>
+   <td><%= array[:sex] %></td>
+   <td><%= array[:age] %></td>
+  <tr>
+  </tr>
+　　<% end %>
+</tr>
+
+
+
+
+
+</table>

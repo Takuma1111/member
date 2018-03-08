@@ -1,0 +1,33 @@
+<h1>会員一覧</h1>
+<table border="1">
+
+  <%array = @members%>
+<tr><th align=center>会員ID</th> <th align=center>氏名</th> <th align=center>性別</th><th align=center>年齢</th><th align=center>成人</th></tr>
+
+
+  <tr>
+   <% array.each do |array| %>
+　　<td><%= array[:id] %></td>
+   <td><%= array[:name] %></td>
+   <td><%if array[:sex] == 0 %>
+        <%= array[:sex] = "男"%>
+        <% else%>
+        <%= array[:sex] = "女"%>
+        <%end%>
+   </td>
+
+   <td><%= array[:age] %></td>
+   <td><%if array[:age] >= 20 %>
+        <%= array[:adult] = "○"%>
+        <%end%>
+   </td>
+  <tr>
+  </tr>
+　　<% end %>
+</tr>
+
+
+
+
+
+</table>
